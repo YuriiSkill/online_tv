@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Marcellus&family=Mulish:wght@400;700&display=swap");
+html {
+  font-size: 10px;
+}
+
+body {
+  background-color: #000;
+  color: #ffffff;
+  font-size: 16px;
+  font-family: "Marcellus",sans-serif;
+  font-family: "Mulish",sans-serif;
+}
+
+.header {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 144rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  margin: 0 auto;
+}
+
+.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+  padding-left: 0;
+}
+
+.nav-item {
+  margin: 0 1.5rem;
+}
+
+.nav-link {
+  text-decoration: none;
+  position: relative;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.nav-link::after {
+  content: "";
+  display: block;
+  opacity: 0;
+  width: 100%;
+  height: .2rem;
+  margin-top: .5rem;
+  border-radius: 5rem;
+  background: #326cff;
+  background: linear-gradient(151deg, #326cff 0%, #26fff2 100%);
+}
+
+.nav-link.active {
+  color: white;
+}
+
+.nav-link.active::after {
+  opacity: 1;
+}
+
+.control {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+  padding-left: 0;
+}
+
+.control-item {
+  margin-left: 7.5rem;
+}
+
+.control-btn {
+  background-color: transparent;
+  border: none;
+  display: block;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.control-btn_search {
+  background-image: url(images/search.svg);
+  width: 1.8rem;
+  height: 1.8rem;
+}
+
+.control-btn_notice {
+  background-image: url(images/notice.svg);
+  width: 2.13rem;
+  height: 2.35rem;
+}
+
+.control-btn_acount {
+  background-image: url(images/acount.svg);
+  width: 1.8rem;
+  height: 1.92rem;
+}
