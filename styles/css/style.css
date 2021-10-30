@@ -307,14 +307,27 @@ button:focus {
           justify-content: space-between;
 }
 
-.moves__link {
-  -webkit-filter: drop-shadow(0px, 0px rgba(44, 176, 249, 0.5));
-          filter: drop-shadow(0px, 0px rgba(44, 176, 249, 0.5));
-  -webkit-transition: 0.2s ease filter;
-  transition: 0.2s ease filter;
+.moves-item {
+  -webkit-box-shadow: 0px, 20px rgba(44, 176, 249, 0.5);
+          box-shadow: 0px, 20px rgba(44, 176, 249, 0.5);
+  -webkit-transition: 0.2s ease box-shadow;
+  transition: 0.2s ease box-shadow;
+  border-radius: 2rem;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 14%;
+          flex: 0 0 14%;
 }
 
-.moves__link:hover {
-  -webkit-filter: drop-shadow(0px, 0px rgba(44, 176, 249, 0.5));
-          filter: drop-shadow(0px, 0px rgba(44, 176, 249, 0.5));
+.moves-item:hover {
+  -webkit-box-shadow: 0px, 20px rgba(44, 176, 249, 0.5);
+          box-shadow: 0px, 20px rgba(44, 176, 249, 0.5);
+}
+
+.moves-item__link {
+  display: block;
+  overflow: hidden;
+  border-radius: 2rem;
+  position: relative;
+  width: 100%;
+  height: 30.9rem;
 }
