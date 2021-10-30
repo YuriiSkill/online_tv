@@ -352,6 +352,32 @@ button:focus {
   height: 1.92rem;
 }
 
+.section__h2 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  line-height: 2rem;
+  padding-left: 2rem;
+  position: relative;
+}
+
+.section__h2:before {
+  content: "";
+  display: block;
+  width: .8rem;
+  height: 3.5rem;
+  border-radius: 5rem;
+  background: #326cff;
+  background: linear-gradient(151deg, #326cff 0%, #26fff2 100%);
+  position: absolute;
+  left: 0;
+  top: -0.7rem;
+}
+
+.section__h2-link {
+  color: #ffffff;
+  text-decoration: none;
+}
+
 .section-banner {
   border-bottom: .1rem solid #2f2e2e;
   position: relative;
@@ -491,6 +517,30 @@ button:focus {
   background-color: transparent;
 }
 
+.moves {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.moves__link {
+  -webkit-filter: drop-shadow(0px, 0px rgba(44, 176, 249, 0.5));
+          filter: drop-shadow(0px, 0px rgba(44, 176, 249, 0.5));
+  -webkit-transition: 0.2s ease filter;
+  transition: 0.2s ease filter;
+}
+
+.moves__link:hover {
+  -webkit-filter: drop-shadow(0px, 0px rgba(44, 176, 249, 0.5));
+          filter: drop-shadow(0px, 0px rgba(44, 176, 249, 0.5));
+}
+
     </style>
   </head>
   <body>
@@ -530,6 +580,19 @@ button:focus {
         </div>
       </div>
     </div>
+    <section class="section">
+      <div class="container">
+        <h2 class="section__h2"><a class="section__h2-link" href="#">Trending TV Shows</a></h2>
+        <div class="moves">           
+          <div class="moves-item"><a class="moves__link" href="#"><img class="moves__img" src="../src/images/posters/poster01.png" alt=""/></a></div>
+          <div class="moves-item"><a class="moves__link" href="#"><img class="moves__img" src="../src/images/posters/poster02.png" alt=""/></a></div>
+          <div class="moves-item"><a class="moves__link" href="#"><img class="moves__img" src="../src/images/posters/poster03.png" alt=""/></a></div>
+          <div class="moves-item"><a class="moves__link" href="#"><img class="moves__img" src="../src/images/posters/poster04.png" alt=""/></a></div>
+          <div class="moves-item"><a class="moves__link" href="#"><img class="moves__img" src="../src/images/posters/poster05.png" alt=""/></a></div>
+          <div class="moves-item"><a class="moves__link" href="#"><img class="moves__img" src="../src/images/posters/poster06.png" alt=""/></a></div>
+        </div>
+      </div>
+    </section>
     <footer> 
       <div class="footer"></div>
     </footer>
