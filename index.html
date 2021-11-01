@@ -398,6 +398,39 @@ button:focus {
   text-decoration: none;
 }
 
+.section__btn {
+  border: none;
+  border-radius: 10rem;
+  padding: 1.5rem 3rem;
+  font-family: 'Mulish', sans-serif;
+  font-weight: 800;
+  cursor: pointer;
+  background: #326cff;
+  background: linear-gradient(151deg, #326cff 0%, #26fff2 100%);
+  color: #ffffff;
+  margin-top: 5.5rem;
+  -webkit-box-shadow: 0px 4px 50px rgba(50, 108, 255, 0.5);
+          box-shadow: 0px 4px 50px rgba(50, 108, 255, 0.5);
+  -webkit-transition: .2s ease box-shadow;
+  transition: .2s ease box-shadow;
+}
+
+.section__btn:hover {
+  -webkit-box-shadow: 0px 0px 0px rgba(50, 108, 255, 0.5);
+          box-shadow: 0px 0px 0px rgba(50, 108, 255, 0.5);
+}
+
+.section__btn::after {
+  content: "";
+  width: 1.4rem;
+  height: 1.8rem;
+  display: block;
+  background-image: url(images/play.svg);
+  position: absolute;
+  left: 1.3rem;
+  top: 1.7rem;
+}
+
 .section-banner {
   border-bottom: .1rem solid #2f2e2e;
   position: relative;
@@ -429,7 +462,7 @@ button:focus {
 .banner__text {
   color: #c2c2c2;
   font-size: 1.8rem;
-  line-height: 1.5rem;
+  line-height: 1.6;
 }
 
 .banner-info {
@@ -585,6 +618,29 @@ button:focus {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
+  height: 100%;
+}
+
+.genres {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-align: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.genres-item {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 24%;
+          flex: 0 0 24%;
+  border-radius: 2rem;
 }
 
     </style>
@@ -640,14 +696,45 @@ button:focus {
       </div>
       <section class="section"></section>
       <div class="container">
-        <h2 class="section__h2"><a class="section__h2-link" href="#">Trending TV Shows</a></h2>
+        <h2 class="section__h2"><a class="section__h2-link" href="#">Trending Movies  </a></h2>
         <div class="moves">           
-          <div class="moves-item"><a class="moves__link" href="#"><img class="moves__img" src="../src/images/posters/poster01.png" alt=""/></a></div>
-          <div class="moves-item"><a class="moves__link" href="#"><img class="moves__img" src="../src/images/posters/poster02.png" alt=""/></a></div>
-          <div class="moves-item"><a class="moves__link" href="#"><img class="moves__img" src="../src/images/posters/poster03.png" alt=""/></a></div>
-          <div class="moves-item"><a class="moves__link" href="#"><img class="moves__img" src="../src/images/posters/poster04.png" alt=""/></a></div>
-          <div class="moves-item"><a class="moves__link" href="#"><img class="moves__img" src="../src/images/posters/poster05.png" alt=""/></a></div>
-          <div class="moves-item"><a class="moves__link" href="#"><img class="moves__img" src="../src/images/posters/poster06.png" alt=""/></a></div>
+          <div class="moves-item"><a class="moves__link" href="#"><img class="moves__img" src="../src/images/posters/poster08.png" alt=""/></a></div>
+          <div class="moves-item"><a class="moves__link" href="#"><img class="moves__img" src="../src/images/posters/poster09.png" alt=""/></a></div>
+          <div class="moves-item"><a class="moves__link" href="#"><img class="moves__img" src="../src/images/posters/poster10.png" alt=""/></a></div>
+          <div class="moves-item"><a class="moves__link" href="#"><img class="moves__img" src="../src/images/posters/poster11.png" alt=""/></a></div>
+          <div class="moves-item"><a class="moves__link" href="#"><img class="moves__img" src="../src/images/posters/poster12.png" alt=""/></a></div>
+          <div class="moves-item"><a class="moves__link" href="#"><img class="moves__img" src="../src/images/posters/poster13.png" alt=""/></a></div>
+        </div>
+        <button class="section__btn">See more</button>
+      </div>
+      <section class="section"></section>
+      <div class="container">
+        <h2 class="section__h2"><a class="section__h2-link" href="#">Popular Genres </a></h2>
+        <div class="genres"> 
+          <div class="genres_item genres-item_romance">   <img src="../src/images/genres/romance.svg" alt=""/>
+            <h3 class="genres-item__title">Romance</h3>
+          </div>
+          <div class="genres_item genres-item_romance">   <img src="../src/images/genres/drama.svg" alt=""/>
+            <h3 class="genres-item__title">Drama</h3>
+          </div>
+          <div class="genres_item genres-item_romance"> <img src="../src/images/genres/historical.svg" alt=""/>
+            <h3 class="genres-item__title">Historical</h3>
+          </div>
+          <div class="genres_item genres-item_romance">   <img src="../src/images/genres/action.svg" alt=""/>
+            <h3 class="genres-item__title">Action</h3>
+          </div>
+          <div class="genres_item genres-item_romance">   <img src="../src/images/genres/sci-fi.svg" alt=""/>
+            <h3 class="genres-item__title">Sci-fi</h3>
+          </div>
+          <div class="genres_item genres-item_romance">   <img src="../src/images/genres/horror.svg" alt=""/>
+            <h3 class="genres-item__title">Horror</h3>
+          </div>
+          <div class="genres_item genres-item_romance">   <img src="../src/images/genres/comedy.svg" alt=""/>
+            <h3 class="genres-item__title">Comedy</h3>
+          </div>
+          <div class="genres_item genres-item_romance">   <img src="../src/images/genres/documentary.svg" alt=""/>
+            <h3 class="genres-item__title">Documentary</h3>
+          </div>
         </div>
       </div>
     </section>
