@@ -479,3 +479,45 @@ button:focus {
   font-weight: 700;
   margin: .2rem 0 0 0;
 }
+
+.actors {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-align: center;
+  margin-top: 2.1rem;
+}
+
+.actors-item {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 14%;
+          flex: 0 0 14%;
+}
+
+.actors__link {
+  display: block;
+  overflow: hidden;
+  border-radius: 2rem;
+  position: relative;
+  width: 19rem;
+  height: 19rem;
+  border-radius: 100%;
+}
+
+.actors__img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 19rem;
+  height: 19rem;
+}
