@@ -631,16 +631,75 @@ button:focus {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  text-align: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  text-align: center;
+  margin-top: 2.1rem;
 }
 
 .genres-item {
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 24%;
-          flex: 0 0 24%;
+      -ms-flex: 0 0 23.7%;
+          flex: 0 0 23.7%;
   border-radius: 2rem;
+  padding: 4.8rem 1rem 3.4rem;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-bottom: 2.7rem;
+}
+
+.genres-item_romance {
+  background: linear-gradient(109.31deg, #FD093F 2.4%, #F383F1 100%);
+}
+
+.genres-item_drama {
+  background: linear-gradient(114.5deg, #0FFFDA 2.22%, #3CDB77 68.84%);
+}
+
+.genres-item_historical {
+  background: linear-gradient(109.31deg, #B936FF 2.4%, #57DEDA 100%);
+}
+
+.genres-item_action {
+  background: linear-gradient(109.31deg, #FD093F 2.4%, #FB1378 2.41%, #FCCB1A 100%);
+}
+
+.genres-item_sci-fi {
+  background: linear-gradient(109.31deg, #FF6472 2.4%, #FDA75D 100%);
+}
+
+.genres-item_horror {
+  background: linear-gradient(110.16deg, #13547A 2.37%, #80D0C7 96.77%);
+}
+
+.genres-item_comedy {
+  background: linear-gradient(109.93deg, #FFF77B 2.37%, #FFBF42 50%);
+}
+
+.genres-item_documentary {
+  background: linear-gradient(109.31deg, #1FA2FF 2.4%, #1FA2FF 2.41%, #1F535C 97.46%);
+}
+
+.genres-icon {
+  height: 8rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.genres__image {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.genres__title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin: .2rem 0 0 0;
 }
 
     </style>
@@ -711,28 +770,36 @@ button:focus {
       <div class="container">
         <h2 class="section__h2"><a class="section__h2-link" href="#">Popular Genres </a></h2>
         <div class="genres"> 
-          <div class="genres_item genres-item_romance">   <img src="../src/images/genres/romance.svg" alt=""/>
+          <div class="genres-item genres-item_romance">  
+            <div class="genres-icon"> <img class="genres__image" src="../src/images/genres/romance.svg" alt=""/></div>
             <h3 class="genres-item__title">Romance</h3>
           </div>
-          <div class="genres_item genres-item_romance">   <img src="../src/images/genres/drama.svg" alt=""/>
+          <div class="genres-item genres-item_drama"> 
+            <div class="genres-icon"> <img class="genres__image" src="../src/images/genres/drama.svg" alt=""/></div>
             <h3 class="genres-item__title">Drama</h3>
           </div>
-          <div class="genres_item genres-item_romance"> <img src="../src/images/genres/historical.svg" alt=""/>
+          <div class="genres-item genres-item_historical">
+            <div class="genres-icon"><img class="genres__image" src="../src/images/genres/historical.svg" alt=""/></div>
             <h3 class="genres-item__title">Historical</h3>
           </div>
-          <div class="genres_item genres-item_romance">   <img src="../src/images/genres/action.svg" alt=""/>
+          <div class="genres-item genres-item_action">  
+            <div class="genres-icon"><img class="genres__image" src="../src/images/genres/action.svg" alt=""/></div>
             <h3 class="genres-item__title">Action</h3>
           </div>
-          <div class="genres_item genres-item_romance">   <img src="../src/images/genres/sci-fi.svg" alt=""/>
+          <div class="genres-item genres-item_sci-fi"> 
+            <div class="genres-icon"><img class="genres__image" src="../src/images/genres/sci-fi.svg" alt=""/></div>
             <h3 class="genres-item__title">Sci-fi</h3>
           </div>
-          <div class="genres_item genres-item_romance">   <img src="../src/images/genres/horror.svg" alt=""/>
+          <div class="genres-item genres-item_horror">  
+            <div class="genres-icon"> <img class="genres__image" src="../src/images/genres/horror.svg" alt=""/></div>
             <h3 class="genres-item__title">Horror</h3>
           </div>
-          <div class="genres_item genres-item_romance">   <img src="../src/images/genres/comedy.svg" alt=""/>
+          <div class="genres-item genres-item_comedy">  
+            <div class="genres-icon"> <img class="genres__image" src="../src/images/genres/comedy.svg" alt=""/></div>
             <h3 class="genres-item__title">Comedy</h3>
           </div>
-          <div class="genres_item genres-item_romance">   <img src="../src/images/genres/documentary.svg" alt=""/>
+          <div class="genres-item genres-item_documentary"> 
+            <div class="genres-icon">  <img src="../src/images/genres/documentary.svg" alt=""/></div>
             <h3 class="genres-item__title">Documentary</h3>
           </div>
         </div>
