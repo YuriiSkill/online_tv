@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <title>online TV</title><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Mulish:wght@400;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Mulish:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
        /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 html {
@@ -744,6 +744,143 @@ button:focus {
   height: 19rem;
 }
 
+.marketing {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-align: center;
+  margin-top: 2.1rem;
+}
+
+.marketing-item {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+  border-radius: 2rem;
+}
+
+.marketing-item:first-child .marketing__link {
+  border-radius: 2rem 0 0 2rem;
+}
+
+.marketing-item:last-child .marketing__link {
+  border-radius: 0 2rem 2rem 0;
+}
+
+.marketing__link {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 34.1rem;
+}
+
+.marketing__img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.offer {
+  max-width: 122.4rem;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-image: url(images/offer-bg.png);
+  padding: 7.2rem 14.7rem 7.2rem 5.7rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 2rem;
+  margin-top: 7rem;
+  margin-bottom: 12.1rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.offer__title {
+  font-size: 6.4rem;
+  font-weight: 700;
+  max-width: 80rem;
+  margin: 0;
+}
+
+.offer__btn {
+  border: none;
+  border-radius: 10rem;
+  padding: 1.5rem 3rem;
+  font-family: 'Mulish', sans-serif;
+  font-weight: 800;
+  cursor: pointer;
+  background: #326cff;
+  background: linear-gradient(151deg, #326cff 0%, #26fff2 100%);
+  color: #ffffff;
+  -webkit-box-shadow: 0px 4px 50px rgba(50, 108, 255, 0.5);
+          box-shadow: 0px 4px 50px rgba(50, 108, 255, 0.5);
+  -webkit-transition: .2s ease box-shadow;
+  transition: .2s ease box-shadow;
+}
+
+.offer__btn:hover {
+  -webkit-box-shadow: 0px 0px 0px rgba(50, 108, 255, 0.5);
+          box-shadow: 0px 0px 0px rgba(50, 108, 255, 0.5);
+}
+
+footer {
+  background: #101012;
+  padding: 7rem 0 5rem;
+}
+
+.footer {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 144rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  margin: 0 auto;
+}
+
+.footer-list {
+  padding-left: 0;
+  list-style: none;
+  margin: 0;
+}
+
+.footer-list__item {
+  margin-bottom: 2rem;
+}
+
+.footer-list__link {
+  font-size: 1.8rem;
+  color: #c2c2c2;
+  text-decoration: none;
+  font-weight: 600;
+}
+
     </style>
   </head>
   <body>
@@ -870,9 +1007,56 @@ button:focus {
           </div>
         </div>
       </div>
+      <section class="section"> 
+        <div class="container"> 
+          <div class="marketing">
+            <div class="marketing-item"><a class="marketing__link" href=""> <img class="marketing__img" src="../src/images/marketing/marketing01.png" alt=""/></a></div>
+            <div class="marketing-item"><a class="marketing__link" href=""> <img class="marketing__img" src="../src/images/marketing/marketing02.png" alt=""/></a></div>
+          </div>
+        </div>
+      </section>
+      <section class="section"> 
+        <div class="container"> 
+          <div class="offer">
+            <h2 class="offer__title">Are You New Here ? Don’t&nbsp;wait, Register Now. </h2>
+            <button class="offer__btn">Register Now</button>
+          </div>
+        </div>
+      </section>
     </section>
     <footer> 
-      <div class="footer"></div>
+      <div class="footer">
+        <div class="footer-item"><a href="#"><img src="images/logo.svg" alt="logo"/></a></div>
+        <div class="footer-item">
+          <ul class="footer-list"> 
+            <li class="footer-list__item"><a class="footer-list__link" href="">Voice over and Subtitle</a></li>
+            <li class="footer-list__item"><a class="footer-list__link" href="">Media Center</a></li>
+            <li class="footer-list__item"><a class="footer-list__link" href="">Privacy</a></li>
+            <li class="footer-list__item"><a class="footer-list__link" href="">Contact us</a></li>
+          </ul>
+        </div>
+        <div class="footer-item">
+          <ul class="footer-list"> 
+            <li class="footer-list__item"><a class="footer-list__link" href="">Voice Description</a></li>
+            <li class="footer-list__item"><a class="footer-list__link" href="">Investor Relations</a></li>
+            <li class="footer-list__item"><a class="footer-list__link" href="">Legal Provisions        </a></li>
+          </ul>
+        </div>
+        <div class="footer-item">
+          <ul class="footer-list"> 
+            <li class="footer-list__item"><a class="footer-list__link" href="">Help Center</a></li>
+            <li class="footer-list__item"><a class="footer-list__link" href="">Job Opportunities</a></li>
+            <li class="footer-list__item"><a class="footer-list__link" href="">Cookies Preferences</a></li>
+          </ul>
+        </div>
+        <div class="footer-item">
+          <ul class="footer-list"> 
+            <li class="footer-list__item"><a class="footer-list__link" href="">Gift Cards</a></li>
+            <li class="footer-list__item"><a class="footer-list__link" href="">Terms of Use</a></li>
+            <li class="footer-list__item"><a class="footer-list__link" href="">Corporate Informations</a></li>
+          </ul>
+        </div>
+      </div>
     </footer>
   </body>
 </html>
