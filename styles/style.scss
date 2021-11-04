@@ -83,28 +83,36 @@ nav {
   
   &-link {
     text-decoration: none;
-    position: relative;
     font-weight: 600;
     color: rgba($white, 0.5);
-    transition: 0.2s ease color;
+    
+    position: relative;
+     &::after {
+       content: "";
+       display: block;
+       width: 100%;
+       height: .2rem;
+       margin-top: .5rem;
+       border-radius: 5rem;
+       background: $bg-gradient-safe;
+       background: $bg-gradient;
+       opacity: 0;
+      
+     }
+    
 
     &:hover {
       color: rgba($white, 1);
+      transition: all 0.4s ease-in;
+       &::after{
+         transition: all 0.4s ease-in;
+         opacity: 1;
+       }
+     
     }
   }
 
-    &::after{
-      content:"";
-      display: block;
-      opacity: 0;
-      width: 100%;
-      height: .2rem;
-      margin-top: .5rem;
-      border-radius: 5rem;
-      background:$bg-gradient-safe;
-      background:$bg-gradient;
-
-    }
+    
    
     &.active{
        color:rgba($white, 1);
@@ -161,6 +169,43 @@ nav {
   }
 }
 
+.burger {
+  display: none;
+  background-color: transparent;
+  border: none;
+  width: 50px;
+  
+
+  @media (max-width: 690px) {
+    display: block;
+  }
+
+  @media (max-width: $r_mob_600) {
+    width: 46px;
+  }
+
+  &__item {
+    display: block;
+    width: 100%;
+    height: 4px;
+    margin-bottom: 8px;
+    background-color: #fff;
+    border-radius: 20px;
+    -webkit-transition: all .2s linear;
+    -o-transition: all .2s linear;
+    transition: all .2s linear;
+   
+
+    @media (max-width: $r_mob_600) {
+      height: 2px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
 .section{
   padding-top: 5rem;
   &__h2{
@@ -171,6 +216,9 @@ nav {
       padding-right: 3rem;
       position: relative;  
       display: inline-block;
+      @media (max-width: $r_tab) {
+        font-size: 2.2rem;
+      }
       &:before{
         content:"";
         display: block;      
@@ -217,20 +265,13 @@ nav {
       margin-top: 5.5rem;      
       box-shadow: 0px 4px 50px rgba($bg-gradient-safe, 0.5);
       transition: .2s ease box-shadow;
+      @media (max-width: $r_mob_600) {
+        margin-top: 2rem;
+      }
       &:hover {
         box-shadow: 0px 0px 0px rgba($bg-gradient-safe, 0.5);
       }
-      &::after {
-        content: "";
-        width: 1.4rem;
-        height: 1.8rem;
-        display: block;
-        background-image: url(images/play.svg);
-        position: absolute;
-        left: 1.3rem;
-        top: 1.7rem;
-
-      }
+      
     }
 }
 
@@ -238,13 +279,28 @@ nav {
   border-bottom: .1rem solid #2f2e2e;
   position: relative;
   overflow: hidden;
+  background-image: url(images/banner.png);
+  background-repeat: no-repeat;
+  background-position: center right;
+  background-size: contain;
+  @media (max-width: $r_desk) {
+    background-image: url(images/banner-min.png);
+    background-position: center center;
+    background-size: cover;
+  }
+  .container {
+    @media (max-width: $r_desk) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
 
-   &__image {
-     position: absolute;
-     right: 0;
-     z-index: -1;
-     height: 100%;
-   }
+  //  &__image {
+  //    position: absolute;
+  //    right: 0;
+  //    z-index: -1;
+  //    height: 100%;
+  //  }
 
 }
 
@@ -254,7 +310,22 @@ nav {
   padding-bottom: 20.3rem;
   background:$black;
   box-shadow: 100px 0px 100px $black;
-  
+  @media (max-width: $r_desk_hd) {
+    padding-top: 7rem;
+    padding-bottom: 12rem;
+  }
+
+  @media (max-width: $r_desk) {
+    max-width: 100%;
+    background-color: transparent;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  @media (max-width: $r_tab) {
+    padding-top: 4rem;
+    padding-bottom: 6rem;
+  }
  
   
   
@@ -263,12 +334,27 @@ nav {
     font-family:'Marcellus', sans-serif;
     font-size: 8rem;
     line-height: 7.5rem;
+    @media (max-width: $r_tab) {
+      font-size: 6rem;
+      line-height: 1.1;
+    }
+
+    @media (max-width: $r_mob_600) {
+      font-size: 4rem;
+    }
   }
 
   &__text{
     color:#c2c2c2;
     font-size: 1.8rem;
     line-height: 1.6;
+    @media (max-width: $r_tab) {
+      font-size: 1.6rem;
+    }
+
+    @media (max-width: $r_mob_600) {
+      font-size: 1.4rem;
+    }
   }
   &-info {
     margin-bottom: 2.9rem;
@@ -301,6 +387,9 @@ nav {
       }
      &__time {
        margin-right: 6.1rem;
+       @media (max-width: $r_mob_600) {
+         margin-right: 2.3rem;
+       }
      }
      &__rating{
        position: relative;
@@ -321,6 +410,10 @@ nav {
   
   &-control{
     margin-top: 3.1rem;
+    @media (max-width: $r_mob_400) {
+      display: flex;
+      flex-direction: column;
+    }
 
     &__btn{
       background: transparent;
@@ -342,6 +435,15 @@ nav {
       margin-right: 3rem;
       box-shadow: 0px 4px 50px rgba($bg-gradient-safe, 0.5);
       transition: .2s ease box-shadow;
+      @media (max-width: $r_tab) {
+        margin-right: 1.5rem;
+      }
+
+      @media (max-width: $r_mob_400) {
+        margin-right: 0;
+        margin-bottom: 2rem;
+        padding-left: 3rem;
+      }
       &:hover{
         
         box-shadow: 0px 0px 0px rgba($bg-gradient-safe, 0.5);
@@ -355,6 +457,9 @@ nav {
         position: absolute;
         left:1.3rem;
         top:1.7rem;
+        @media (max-width: $r_mob_400) {
+          display: none;
+        }
 
       }
         }
@@ -377,15 +482,30 @@ nav {
   align-items:center;
   justify-content: space-between;  
   margin-top: 2.1rem;
+  @media (max-width: $r_desk) {
+    flex-wrap: wrap;
+  }
   &-item{
      box-shadow: 0px 0px 20px rgba(44, 176, 249, 0.0);
      transition:0.2s ease box-shadow;
     border-radius: 2rem;
     flex:0 0 14%;
+    @media (max-width: $r_desk) {
+      flex: 0 0 32%;
+      margin-bottom: 4rem;
+    }
+
+    @media (max-width: $r_mob_500) {
+      flex: 0 0 48%;
+      margin-bottom: 2rem;
+    }
     
     
     &:hover {
       box-shadow: 0px 0px 20px rgba(44, 176, 249, 0.5);
+      @media (max-width: $r_desk) {
+        box-shadow: none;
+      }
     }
       
         }
@@ -398,6 +518,17 @@ nav {
       position: relative;
       width: 100%;
       height: 30.9rem;
+      @media (max-width: $r_desk_hd) {
+        height: 22rem;
+      }
+
+      @media (max-width: $r_desk) {
+        height: 31rem;
+      }
+
+      @media (max-width: $r_mob_600) {
+        height: 22rem;
+      }
 
     }
 
@@ -422,6 +553,9 @@ nav {
   flex-wrap: wrap;
   text-align: center;  
   margin-top: 2.1rem;
+  @media (max-width: $r_desk) {
+    flex-wrap: wrap;
+  }
   &-item{
     flex: 0 0 23.7%;
     border-radius:2rem;
@@ -429,6 +563,22 @@ nav {
     -webkit-box-sizing: border-box;
      box-sizing: border-box;
     margin-bottom: 2.7rem;
+    @media (max-width: $r_desk) {
+      flex: 0 0 32%;
+    }
+
+    @media (max-width: $r_tab) {
+      margin-bottom: 1.5rem;
+    }
+
+    @media (max-width: $r_mob_600) {
+      flex: 0 0 48.5%;
+      margin-bottom: 1.2rem;
+    }
+
+    @media (max-width: $r_mob_400) {
+      padding: 2.8rem 1rem 1.8rem;
+    }
     &_romance{
       background: linear-gradient(109.31deg, #FD093F 2.4%, #F383F1 100%);
     }
@@ -440,9 +590,15 @@ nav {
 }
     &_action {
       background: linear-gradient(109.31deg, #FD093F 2.4%, #FB1378 2.41%, #FCCB1A 100%);
+       @media (max-width: $r_desk) {
+         flex: 0 0 49%;
+       }
 }
     &_sci-fi {
       background: linear-gradient(109.31deg, #FF6472 2.4%, #FDA75D 100%);
+      @media (max-width: $r_desk) {
+        flex: 0 0 49%;
+      }
 }
     &_horror {
       background: linear-gradient(110.16deg, #13547A 2.37%, #80D0C7 96.77%);
@@ -459,6 +615,13 @@ nav {
     height: 8rem;
     position: relative;
     overflow: hidden;
+     @media (max-width: $r_tab) {
+       height: 6rem;
+     }
+
+     @media (max-width: $r_mob_400) {
+       height: 5rem;
+     }
   }
 
   &__image{
@@ -467,12 +630,23 @@ nav {
     top: 50%;
     transform:translate(-50%, -50%);
     object-fit: cover;
+    @media (max-width: $r_tab) {
+      height: 100%;
+    }
   }
 
   &__title{
     font-size: 2.8rem;
     font-weight: 700;
     margin: .2rem 0 0 0;
+     @media (max-width: $r_tab) {
+       font-size: 2rem;
+       margin: .5rem 0 0 0;
+     }
+
+     @media (max-width: $r_mob_400) {
+       font-size: 1.6rem;
+     }
 
   }
 
@@ -486,8 +660,19 @@ nav {
     justify-content: space-between;
     text-align: center;
     margin-top: 2.1rem;
+    @media (max-width: $r_desk_hd) {
+      flex-wrap: wrap;
+    }
     &-item{
       flex:0 0 14%;
+      @media (max-width: $r_desk_hd) {
+        flex: 0 0 32%;
+        text-align: center;
+      }
+
+      @media (max-width: $r_mob_600) {
+        flex: 0 0 49%;
+      }
     }
      &__link {
        display: block;
@@ -497,6 +682,19 @@ nav {
        width: 19rem;
        height: 19rem;
        border-radius:100%;
+        @media (max-width: $r_desk_hd) {
+          margin: 0 auto;
+        }
+
+        @media (max-width: $r_tab) {
+          width: 15rem;
+          height: 15rem;
+        }
+
+        @media (max-width: $r_mob_400) {
+          width: 10rem;
+          height: 10rem;
+        }
 
      }
 
@@ -508,6 +706,15 @@ nav {
        object-fit: cover;
        width: 19rem;
        height: 19rem;
+       @media (max-width: $r_tab) {
+         width: 15rem;
+         height: 15rem;
+       }
+
+       @media (max-width: $r_mob_400) {
+         width: 10rem;
+         height: 10rem;
+       }
      }
   }
 
@@ -517,6 +724,9 @@ nav {
     justify-content: space-between;
     text-align: center;
     margin-top: 2.1rem;
+     @media (max-width: $r_desk) {
+       display: none;
+     }
 
     &-item {
       flex: 0 0 50%;
@@ -570,11 +780,44 @@ nav {
     margin-top: 7rem;
     margin-bottom: 12.1rem;
     box-sizing: border-box;
+    @media (max-width: $r_desk_hd) {
+      padding: 7.2rem 5.7rem;
+    }
+
+    @media (max-width: $r_desk) {
+      flex-wrap: wrap;
+      text-align: center;
+      justify-content: center;
+    }
+
+    @media (max-width: $r_mob_600) {
+      padding: 4rem 3rem;
+      margin-top: 0;
+      margin-bottom: 7rem;
+    }
     &__title{
       font-size: 6.4rem;
       font-weight: 700;
       max-width: 80rem;
       margin: 0;
+      @media (max-width: $r_desk_hd) {
+        font-size: 5.4rem;
+        margin-right: 12rem;
+      }
+
+      @media (max-width: $r_desk) {
+        font-size: 4.4rem;
+        margin-right: 0;
+        margin-bottom: 2rem;
+      }
+
+      @media (max-width: $r_tab) {
+        font-size: 3.4rem;
+      }
+
+      @media (max-width: $r_mob_600) {
+        font-size: 2.4rem;
+      }
     }
 
     &__btn {
@@ -602,11 +845,12 @@ nav {
   footer{
     background: rgba(16, 16, 18, 1);
     padding: 7rem 0 5rem;
+    @media (max-width: $r_tab) {
+      padding: 5rem 0 3rem;
+    }
   }
 
-  .footer{
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
+  .footer {
     display: flex;
     justify-content: space-between;
     max-width: 144rem;
@@ -615,20 +859,87 @@ nav {
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
     margin: 0 auto;
-    &-list{
-      padding-left: 0;
-      list-style: none;
-      margin: 0;
-      &__item{
-        margin-bottom: 2rem;
-      }
-      &__link{
-        font-size: 1.8rem;
-        color:rgba(194, 194, 194, 1);
-        text-decoration: none;
-        font-weight: 600;
-      }
-      
+
+    @media (max-width: $r_desk_hd) {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 2rem;
+      grid-template-areas: 'logo a b''logo c d';
+      padding-top: 0;
+      padding-bottom: 0;
     }
 
+    @media (max-width: $r_desk) {
+      grid-template-columns: 200px 1fr 1fr;
+    }
+
+    @media (max-width: $r_tab) {
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: 'logo logo''a b''c d';
+    }
+
+    &-logo {
+      &__img {
+        @media (max-width: $r_tab) {
+          margin-bottom: 2rem;
+          max-width: 120px;
+        }
+
+        @media (max-width: $r_mob_600) {
+          max-width: 105px;
+        }
+      }
+    }
+
+    &-item {
+      &:nth-child(1) {
+        grid-area: logo;
+      }
+
+      &:nth-child(2) {
+        grid-area: a;
+      }
+
+      &:nth-child(3) {
+        grid-area: b;
+      }
+
+      &:nth-child(4) {
+        grid-area: c;
+      }
+
+      &:nth-child(5) {
+        grid-area: d;
+      }
+    }
+
+    &-list {
+      list-style: none;
+      padding-left: 0;
+      margin: 0;
+
+      &__item {
+        margin-bottom: 2rem;
+
+        @media (max-width: $r_tab) {
+          margin-bottom: 1.6rem;
+        }
+      }
+
+      &__link {
+        font-size: 1.8rem;
+        color: #C2C2C2;
+        text-decoration: none;
+        font-weight: 600;
+
+        @media (max-width: $r_tab) {
+          font-size: 1.6rem;
+          line-height: 1.5;
+        }
+
+        @media (max-width: $r_mob_500) {
+          font-size: 1.4rem;
+        }
+      }
+    }
   }
